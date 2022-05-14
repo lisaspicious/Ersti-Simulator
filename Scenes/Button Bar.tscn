@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icons/diary.svg" type="Texture" id=1]
+[ext_resource path="res://Skripte/DiaryButton.gd" type="Script" id=2]
+
+[node name="Button Bar" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 512.0
+margin_bottom = 512.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]
